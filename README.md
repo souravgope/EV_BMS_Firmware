@@ -28,17 +28,19 @@ This project demonstrates modular firmware design, test-driven development, and 
 
 ---
 
+
+
 ## Project Structure
 
 EV_BMS_Firmware/
-│── main.cpp # Main program
-│── battery.h # Battery module header
-│── battery.cpp # Battery module implementation
-│── bms.h # BMS module header
-│── bms.cpp # BMS module implementation
-│── test_battery.cpp # Unit tests for Battery module
-│── test_bms.cpp # Unit tests for BMS module
-│── README.md # Project description
+- main.cpp          # Main program
+- battery.h         # Battery module header
+- battery.cpp       # Battery module implementation
+- bms.h             # BMS module header
+- bms.cpp           # BMS module implementation
+- test_battery.cpp  # Unit tests for Battery module
+- test_bms.cpp      # Unit tests for BMS module
+- README.md         # Project description
 
 
 ---
