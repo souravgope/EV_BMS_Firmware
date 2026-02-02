@@ -50,23 +50,24 @@ EV_BMS_Firmware/
 ### 1️⃣ Compile main program
 
 ```bash
-g++ main.cpp battery.cpp bms.cpp -o bms
-./bms
+ g++ main.cpp battery.cpp soc.cpp bms.cpp -o bms.exe
+>> .\bms.exe
+
 
 
 2️⃣ Compile and run Battery unit tests
-g++ test_battery.cpp battery.cpp -o test_battery
-./test_battery
+ g++ test_battery.cpp battery.cpp soc.cpp -o test_battery.exe 
+>> .\test_battery.exe
 
 
 3️⃣ Compile and run BMS unit tests
-g++ test_bms.cpp battery.cpp bms.cpp -o test_bms
-./test_bms
+ g++ test_bms.cpp battery.cpp soc.cpp  bms.cpp -o test_bms.exe
+>> .\test_bms.exe
 
 
 #---Sample Output
 BMS Firmware Started
-Battery Voltage: 48 V
+Battery Voltage: 3.5
 Battery Temperature: 30 C
 Battery SOC: 41.6667 %
 BMS Status: SAFE
