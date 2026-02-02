@@ -4,12 +4,12 @@
 #include "bms.h"
 
 void testSafeBattery() {
-    Battery b(48.0, 30.0, 80.0);
+    Battery b(3.8, 30.0);
     assert(checkBatterySafety(b));
 }
 
 void testUnsafeBattery() {
-    Battery b(60.0, 70.0, 80.0);
+    Battery b(4.5, 70.0);
     assert(!checkBatterySafety(b));
 }
 

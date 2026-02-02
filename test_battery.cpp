@@ -3,22 +3,22 @@
 #include "battery.h"
 
 void testVoltageSafe() {
-    Battery b(48.0, 30.0, 80.0);
+    Battery b(3.8, 30.0);
     assert(b.isVoltageSafe());
 }
 
 void testVoltageUnsafe() {
-    Battery b(60.0, 30.0, 80.0);
+    Battery b(4.5, 30.0);
     assert(!b.isVoltageSafe());
 }
 
 void testTemperatureSafe() {
-    Battery b(48.0, 25.0, 80.0);
+    Battery b(3.8, 25.0);
     assert(b.isTemperatureSafe());
 }
 
 void testTemperatureUnsafe() {
-    Battery b(48.0, 70.0, 80.0);
+    Battery b(3.8, 70.0);
     assert(!b.isTemperatureSafe());
 }
 

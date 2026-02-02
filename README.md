@@ -68,7 +68,7 @@ g++ test_bms.cpp battery.cpp bms.cpp -o test_bms
 BMS Firmware Started
 Battery Voltage: 48 V
 Battery Temperature: 30 C
-Battery SOC: 80 %
+Battery SOC: 41.6667 %
 BMS Status: SAFE
 
 

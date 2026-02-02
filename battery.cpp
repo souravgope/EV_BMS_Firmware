@@ -1,14 +1,15 @@
 #include "battery.h"
+#include "soc.h"
 
 // Constructor definition
-Battery::Battery(float v, float t, float s) {
+Battery::Battery(float v, float t) {
     voltage = v;
     temperature = t;
-    soc = s;
+    soc = calculateSOC(voltage);
 }
 
 bool Battery::isVoltageSafe() const {
-    return (voltage >= 40.0 && voltage <= 54.0);
+    return (voltage >= 3.0 && voltage <= 4.2);
 }
 
 bool Battery::isTemperatureSafe() const {

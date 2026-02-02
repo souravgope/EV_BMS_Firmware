@@ -7,7 +7,7 @@ struct Battery {
     float soc;
 
     // Constructor
-    Battery(float v, float t, float s);
+    Battery(float v, float t);
 
     bool isVoltageSafe() const;
     bool isTemperatureSafe() const;

@@ -3,7 +3,7 @@
 #include "bms.h"
 
 int main() {
-    Battery battery(48.0, 30.0, 80.0); // Voltage, Temperature, SOC
+    Battery battery(3.5, 30.0); // Voltage, Temperature
 
     std::cout << "BMS Firmware Started" << std::endl;
     std::cout << "Battery Voltage: " << battery.voltage << " V" << std::endl;
