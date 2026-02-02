@@ -1,10 +1,8 @@
 # EV Battery Management System (BMS) Firmware Simulation
 
-
 ## Overview
-
-This project simulates the **Battery Management System (BMS)** of an electric vehicle (EV) using C++.  
-The BMS monitors battery voltage, temperature, and state-of-charge (SOC), and ensures that the battery operates safely.  
+This project simulates the **Battery Management System (BMS)** of an electric vehicle (EV) using C++.
+The BMS monitors battery voltage, temperature, and state-of-charge (SOC), and ensures that the battery operates safely.
 It also includes **unit tests** to verify the functionality of the Battery and BMS modules, following the **V-Cycle model** used in embedded systems development.
 
 This project demonstrates modular firmware design, test-driven development, and basic embedded engineering concepts.
@@ -12,7 +10,6 @@ This project demonstrates modular firmware design, test-driven development, and 
 ---
 
 ## Features
-
 - Reads battery parameters (voltage, temperature, SOC)
 - Monitors battery safety limits:
   - Voltage safe range: 40V – 54V
@@ -28,52 +25,45 @@ This project demonstrates modular firmware design, test-driven development, and 
 
 ---
 
-
-
 ## Project Structure
-
 EV_BMS_Firmware/
 - main.cpp          # Main program
 - battery.h         # Battery module header
 - battery.cpp       # Battery module implementation
 - bms.h             # BMS module header
 - bms.cpp           # BMS module implementation
+- soc.h             # SOC estimator header
+- soc.cpp           # SOC estimator implementation
 - test_battery.cpp  # Unit tests for Battery module
 - test_bms.cpp      # Unit tests for BMS module
 - README.md         # Project description
-
 
 ---
 
 ## How to Run
 
-### 1️⃣ Compile main program
-
+### 1 Compile main program
 ```bash
- g++ main.cpp battery.cpp soc.cpp bms.cpp -o bms.exe
->> .\bms.exe
+g++ main.cpp battery.cpp soc.cpp bms.cpp -o bms.exe
+.\bms.exe
+ 2  Compile and run Battery unit tests
+bash
 
+g++ test_battery.cpp battery.cpp soc.cpp -o test_battery.exe
+.\test_battery.exe
+3  Compile and run BMS unit tests
+bash
 
+g++ test_bms.cpp battery.cpp soc.cpp bms.cpp -o test_bms.exe
+.\test_bms.exe
+Sample Output
 
-2️⃣ Compile and run Battery unit tests
- g++ test_battery.cpp battery.cpp soc.cpp -o test_battery.exe 
->> .\test_battery.exe
-
-
-3️⃣ Compile and run BMS unit tests
- g++ test_bms.cpp battery.cpp soc.cpp  bms.cpp -o test_bms.exe
->> .\test_bms.exe
-
-
-#---Sample Output
 BMS Firmware Started
 Battery Voltage: 3.5
 Battery Temperature: 30 C
 Battery SOC: 41.6667 %
 BMS Status: SAFE
-
-
-#Unit Test Output:
+Unit Test Output
 
 ✅ Battery unit tests passed!
 ✅ BMS unit tests passed!
